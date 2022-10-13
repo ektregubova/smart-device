@@ -12,8 +12,11 @@ $color-transparent:                 rgba(255, 255, 255, 0);
 
 $color-neon-blue:                   #2c39f2;
 $color-torch-red:                   #ff1553;
-
-// Gradient
+$color-dark-blue:                   #041827;
+$color-background:                  #e5e5e5;
+$color-blue:                        #00b2ff;
+$color-text-light:                  #f2f5f7;
+$color-link:                        rgba(255, 255, 255, 0.7);
 
 $black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
 
@@ -27,7 +30,7 @@ $fz-default:                        16px;
 // https://www.artlebedev.ru/kovodstvo/sections/159/#13
 $ff-rouble:                         "Rouble", "Arial", sans-serif;
 
-$ff-placeholder:                    "Placeholder", "Arial", sans-serif;
+$ff-placeholder:                    "PT Mono", "Arial", sans-serif;
 
 // Animation
 // ---------------------------------
