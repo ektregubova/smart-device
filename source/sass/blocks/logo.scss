@@ -1,6 +1,7 @@
 .logo {
   display: grid;
   column-gap: 15px;
+  grid-template-columns: 55px 145px;
   grid-template-areas:
     "logo text"
     "logo description";

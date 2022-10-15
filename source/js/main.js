@@ -1,5 +1,8 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
+import {showItemFooter} from './modules/footer';
+import {onLinkMove} from './modules/anchor';
+import {showMoreText} from './modules/about';
 
 // ---------------------------------
 
@@ -16,6 +19,9 @@ window.addEventListener('DOMContentLoaded', () => {
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
+    showItemFooter();
+    onLinkMove();
+    showMoreText();
     initModals();
   });
 });
