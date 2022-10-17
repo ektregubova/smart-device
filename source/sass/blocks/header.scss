@@ -1,4 +1,5 @@
 .header-wrapper {
+  width: 100%;
   position: fixed;
   z-index: 10;
   top: 0;
@@ -7,25 +8,60 @@
 }
 
 .header-container {
-  max-width: 1220px;
+  max-width: 1260px;
   margin: 0 auto;
   min-height: 120px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-right: 100px;
+
+  @include vp-1023 {
+    padding-right: 25px;
+  }
+
+  @include vp-767 {
+    padding-right: 10px;
+    min-height: 70px;
+  }
 }
 
-.header__list-link {
+.header-logo {
+  padding-bottom: 5px;
+  padding-left: 20px;
+
+  @include vp-1023 {
+    padding: 0;
+    margin-bottom: 25px;
+  }
+
+  @include vp-767 {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 5px;
+  }
+}
+
+.header-list {
   list-style: none;
   display: flex;
-  height: 20px;
-  width: 480px;
+  height: 38px;
+  width: 460px;
   justify-content: space-between;
   padding: 0;
   margin: 0;
+
+  @include vp-1023 {
+    width: 97px;
+    margin-bottom: 25px;
+  }
+
+  @include vp-767 {
+    margin: 0;
+  }
 }
 
-.header__link {
+.header-link {
   padding-left: 35px;
   position: relative;
 
@@ -48,19 +84,48 @@
     top: 0;
     background: url("../../img/svg/phone.svg") no-repeat center;
   }
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    color: $color-blue;
+  }
+
+  &:active {
+    outline: 1px solid $color-blue;
+    outline-offset: 2px;
+  }
 }
 
-.header__link-text {
+.header-text {
   @include vp-1023 {
     display: none;
   }
 }
 
-.header__button {
+.header-button {
   border: 1px solid $color-text-light;
   border-radius: 3px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
 
   @include vp-1023 {
     display: none;
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    color: $color-blue;
+  }
+
+  &:active {
+    border: none;
+    outline: 1px solid $color-blue;
   }
 }

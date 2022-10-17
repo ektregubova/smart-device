@@ -1,44 +1,50 @@
 .intro {
   width: 100%;
   height: 880px;
+  /* stylelint-disable */
   background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
-    url("../../img/background/background-desktop.png");
+    image-set(url("../img/background/background-desktop.png") 1x,
+              url("../img/background/background-desktop@2x.png") 2x);
+  /* stylelint-enable */
+  background-repeat: no-repeat;
+  background-size: cover;
   color: $color-text-light;
   background-color: $color-dark-blue;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
   @include vp-1023 {
     height: 640px;
+    /* stylelint-disable */
     background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
-      url("../../img/background/background-tablet.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+      image-set(url("../img/background/background-tablet.png") 1x,
+                url("../img/background/background-tablet@2x.png") 2x);
+    /* stylelint-enable */
   }
 
   @include vp-767 {
     height: 560px;
+    /* stylelint-disable */
     background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
-      url("../../img/background/background-mobile.png");
+      image-set(url("../img/background/background-mobile.png") 1x,
+                url("../img/background/background-mobile@2x.png") 2x);
+    /* stylelint-enable */
   }
 }
 
 .intro__wrapper {
   max-width: 1220px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-direction: column;
   padding-left: 125px;
+  padding-top: 300px;
+  height: 100%;
 
   @include vp-1023 {
     padding-left: 0;
+    padding-top: 176px;
   }
 
-  //@include vp-767 {
-  //}
+  @include vp-767 {
+    padding-top: 148px;
+  }
 }
 
 .intro__title {
@@ -49,17 +55,19 @@
   letter-spacing: 0.07em;
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 
 
   @include vp-1023 {
     font-size: 64px;
     line-height: 75px;
+    margin-bottom: 4px;
   }
 
   @include vp-767 {
     font-size: 36px;
     line-height: 42px;
+    margin-bottom: 9px;
   }
 }
 
@@ -67,19 +75,21 @@
   font-size: 22px;
   line-height: 34px;
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 48px;
   width: 685px;
 
   @include vp-1023 {
     font-size: 22px;
     line-height: 34px;
     width: 670px;
+    margin-bottom: 57px;
   }
 
   @include vp-767 {
     font-size: 14px;
     line-height: 22px;
-    width: 270px;
+    width: 100%;
+    margin-bottom: 45px;
   }
 }
 
@@ -95,11 +105,26 @@
   background: $color-blue;
   border-radius: 3px;
 
+  @include vp-1023 {
+    margin-left: 45px;
+  }
+
   @include vp-767 {
-    width: 270px;
+    width: 100%;
     height: 40px;
     font-size: 14px;
     line-height: 16px;
+    margin-left: 0;
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    color: $color-dark-blue;
+  }
+
+  &:active {
+    outline: 1px solid $color-dark-blue;
   }
 }
 

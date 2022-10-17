@@ -3,6 +3,7 @@ import {initModals} from './modules/modals/init-modals';
 import {showItemFooter} from './modules/footer';
 import {onLinkMove} from './modules/anchor';
 import {showMoreText} from './modules/about';
+import {addListenerOnInput, onClickFocusInput} from './modules/form';
 
 // ---------------------------------
 
@@ -16,12 +17,14 @@ window.addEventListener('DOMContentLoaded', () => {
   // Modules
   // ---------------------------------
 
+  showItemFooter();
+  onLinkMove();
+  showMoreText();
+  addListenerOnInput();
+  onClickFocusInput();
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
-    showItemFooter();
-    onLinkMove();
-    showMoreText();
     initModals();
   });
 });

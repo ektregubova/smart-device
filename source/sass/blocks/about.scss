@@ -2,7 +2,7 @@
   max-width: 1220px;
   margin: 0 auto;
   display: flex;
-  padding-left: 245px;
+  padding-left: 250px;
   padding-bottom: 120px;
   position: relative;
 
@@ -12,7 +12,10 @@
     left: 0;
     width: 150px;
     height: 320px;
-    background-image: url("../../img/background/text2022.png");
+    /* stylelint-disable */
+    background-image: image-set(url("../img/background/text2022.png") 1x,
+                                url("../img/background/text2022@2x.png") 2x);
+    /* stylelint-enable */
   }
 
   @include vp-1023 {
@@ -34,20 +37,38 @@
   font-size: 36px;
   line-height: 51px;
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 
   @include vp-767 {
     font-size: 28px;
     line-height: 39px;
+    margin-bottom: 14px;
   }
 }
 
 .about__info {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+
+  @include vp-767 {
+    margin-bottom: 12px;
+  }
 }
 
 [data-text] {
   display: none;
+}
+
+[data-mobile] {
+  @include vp-767 {
+    height: 210px;
+    overflow: hidden;
+  }
+}
+
+[data-mobile].is-open {
+  @include vp-767 {
+    height: 378px;
+  }
 }
 
 [data-text].is-open {
@@ -56,12 +77,13 @@
 
 .about__text {
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 22px;
   line-height: 22px;
 
   @include vp-767 {
     font-size: 14px;
     line-height: 19px;
+    margin-bottom: 18px;
   }
 }
 
@@ -76,11 +98,25 @@
   text-align: center;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  font-size: 14px;
+  line-height: 16px;
 
   @include vp-767 {
     width: 160px;
     height: 35px;
     font-size: 14px;
     line-height: 16px;
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    background-color: $color-blue;
+    color: $color-default-white;
+  }
+
+  &:active {
+    background-color: $color-dark-blue;
+    border: 1px solid $color-dark-blue;
   }
 }
