@@ -12,9 +12,10 @@
   margin: 0 auto;
   min-height: 120px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding-right: 100px;
+  padding-right: 80px;
 
   @include vp-1023 {
     padding-right: 25px;
@@ -45,7 +46,8 @@
 .header-list {
   list-style: none;
   display: flex;
-  height: 38px;
+  flex-wrap: wrap;
+  min-height: 38px;
   width: 460px;
   justify-content: space-between;
   padding: 0;
@@ -88,12 +90,12 @@
   &:hover,
   &:focus,
   &:focus-visible {
-    color: $color-blue;
+    outline: 1px solid $color-blue;
+    outline-offset: 2px;
   }
 
   &:active {
-    outline: 1px solid $color-blue;
-    outline-offset: 2px;
+    color: $color-blue;
   }
 }
 
@@ -113,6 +115,7 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   margin-bottom: 12px;
+  width: 160px;
 
   @include vp-1023 {
     display: none;
@@ -121,11 +124,11 @@
   &:hover,
   &:focus,
   &:focus-visible {
-    color: $color-blue;
+    border: none;
+    outline: 1px solid $color-blue;
   }
 
   &:active {
-    border: none;
-    outline: 1px solid $color-blue;
+    color: $color-blue;
   }
 }

@@ -22,24 +22,30 @@
           <div class="header-container">
             <a class="header-logo">
               <picture>
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/small-logo.webp, img/small-logo@2x.webp 2x">
+                <source type="image/webp" srcset="img/logo.webp, img/logo@2x.webp 2x">
                 <source media="(max-width: 767px)" srcset="img/small-logo.png, img/small-logo@2x.png 2x">
-                <img class="header-logo__image" src="img/logo.png" srcset="img/logo@2x.png 2x" width="215" height="55"
-                  alt="Smart Device.">
+                <img src="img/logo.png" srcset="img/logo@2x.png 2x" width="215" height="55" alt="Smart Device.">
               </picture>
             </a>
             <ul class="header-list">
               <li class="header-item">
                 <a class="header-link header-link--mail" href="mailto:info@sd.ru">
-                  <span class="header-text">info@sd.ru</span>
+                  <span class="header-text">
+                    info@sd.ru
+                  </span>
                 </a>
               </li>
               <li class="header-item">
                 <a class="header-link header-link--phone" href="tel:+74950005252">
-                  <span class="header-text">+7 (495) 000 52 52</span>
+                  <span class="header-text">
+                    +7 (495) 000 52 52
+                  </span>
                 </a>
               </li>
             </ul>
-            <button class="header-button btn" type="button" data-open-modal="feedback">
+            <button class="header-button btn" type="button" data-open-modal="feedback" tabindex="0">
               Заказать звонок
             </button>
           </div>
@@ -52,10 +58,16 @@
         <div class="container">
           <div class="intro__wrapper">
             <h2 class="intro__title">Печатные платы</h2>
-            <p class="intro__info">производство и монтаж, поставка комплектующих, блоков и модулей</p>
+            <p class="intro__info">
+              производство и монтаж, поставка комплектующих, блоков и модулей
+            </p>
             <a class="intro__link btn" href="#form">
-              <span class="intro__text">Получить бесплатную консультацию</span>
-              <span class="intro__mobile-text">бесплатная консультация</span>
+              <span class="intro__text">
+                Получить бесплатную консультацию
+              </span>
+              <span class="intro__mobile-text">
+                бесплатная консультация
+              </span>
             </a>
           </div>
         </div>
@@ -71,7 +83,7 @@
                   <use href="img/sprite_auto.svg#stopwatch"></use>
                 </svg>
                 <h3 class="advantages__name advantages__name--time">Оперативные сроки</h3>
-                <p class="advantages__description">
+                <p>
                   Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и
                   доставлять заказы плат и
                   комплектующих в самые короткие сроки
@@ -83,7 +95,7 @@
                   <use href="img/sprite_auto.svg#hired"></use>
                 </svg>
                 <h3 class="advantages__name advantages__name--suppliers">Крупные поставщики</h3>
-                <p class="advantages__description">
+                <p>
                   Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND.
                   Сотрудничество с
                   такими компаниями обеспечивает хорошее качество нашей продукции.
@@ -95,7 +107,7 @@
                   <use href="img/sprite_auto.svg#detective"></use>
                 </svg>
                 <h3 class="advantages__name advantages__name--privacy">Полная конфиденциальность</h3>
-                <p class="advantages__description">
+                <p>
                   По желанию клиента &nbsp;мы обеспечиваем полную конфиденциальность.
                 </p>
               </li>
@@ -105,7 +117,7 @@
                   <use href="img/sprite_auto.svg#tag"></use>
                 </svg>
                 <h3 class="advantages__name advantages__name--cost">Персонализация стоимости</h3>
-                <p class="advantages__description">
+                <p>
                   Мы &nbsp;подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая
                   Вас
                   устраивает.
@@ -121,13 +133,13 @@
             <div class="about__container">
               <h2 class="about__title">О компании</h2>
               <div class="about__info" data-mobile>
-                <p class="about__text">Мы поставляем электронные комплектующие, производим печатные платы и
+                <p>Мы поставляем электронные комплектующие, производим печатные платы и
                   предоставляем
                   мировые
                   технологии с 1997 года.
                   Выполняем срочные заказы и пилотные образцы до 10 дней.
                 </p>
-                <p class="about__text">
+                <p>
                   Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC,
                   REFOND.<br>
                   Печатные платы и
@@ -138,13 +150,13 @@
                 </p>
               </div>
               <div class="about__info" data-text>
-                <p class="about__text">
+                <p>
                   Smart Device - это команда профессионалов. Через нас прошло более 1 000 000 клиентов, 70% из которых
                   продолжают
                   сотрудничество по сей день. На данный момент насчитывается более 14 офисов по всей стране и 20 городов
                   присутствия.
                 </p>
-                <p class="about__text"> Мы стремимся к постоянному развитию и повышению уровня качества продукции,
+                <p> Мы стремимся к постоянному развитию и повышению уровня качества продукции,
                   производимой
                   внутри компании. Использование
                   инновационных технологий помогает экономить деньги и время наших клиентов.
@@ -160,19 +172,24 @@
           <div class="services__wrapper">
             <h2 class="services__title">Товары и услуги &nbsp;
               Smart Device</h2>
-            <p class="services__text">Smart Device предлагает следующие товары и услуги</p>
+            <p class="services__text">
+              Smart Device предлагает следующие товары и услуги
+            </p>
             <div class="services__list">
-              <a class="services__link services__link--production" href="#production">
-                <span class="services__info">Производство печатных
-                  плат</span>
+              <a class="services__link services__link--production" href="production.html">
+                <span class="services__info">
+                  Производство печатных плат
+                </span>
               </a>
-              <a class="services__link services__link--montage" href="#montage">
-                <span class="services__info">Монтаж печатных плат</span>
+              <a class="services__link services__link--montage" href="montage.html">
+                <span class="services__info">
+                  Монтаж печатных плат
+                </span>
               </a>
-              <a class="services__link services__link--accessories" href="#accessories">
-                <span class="services__info">Комплектующие
-                  для
-                  светотехники</span>
+              <a class="services__link services__link--accessories" href="accessories.html">
+                <span class="services__info">
+                  Комплектующие для светотехники
+                </span>
               </a>
             </div>
           </div>
@@ -181,31 +198,35 @@
       <section class="feedback" id="form">
         <div class="container">
           <div class="feedback__wrapper">
-            <img class="feedback__img" src="img/paper-airplane.png" srcset="img/paper-airplane@2x.png 2x" width="510"
-              height="285" alt="Бумажный самолетик.">
+            <picture>
+              <source type="image/webp" srcset="img/paper-airplane.webp, img/paper-airplane@2x.webp 2x">
+              <img src="img/paper-airplane.png" srcset="img/paper-airplane@2x.png 2x" width="510" height="285"
+                alt="Бумажный самолетик.">
+            </picture>
             <div class="feedback__wrapper-form">
               <h2 class="feedback__title">Остались вопросы? Задайте их нам!</h2>
-              <p class="feedback__text">Мы проконсультируем Вас бесплатно</p>
+              <p class="feedback__text">
+                Мы проконсультируем Вас бесплатно
+              </p>
               <form class="feedback__form" action="https://echo.htmlacademy.ru/" method="post">
                 <div class="feedback__container">
-                  <label class="feedback__label">
-                    <input class="feedback__input" placeholder="Имя" type="text" name="name" required>
+                  <label>
+                    <input placeholder="Имя" type="text" name="name" required>
                   </label>
-
-                  <label class="feedback__label">
-                    <input class="feedback__input" placeholder="Телефон" type="tel" name="phone" required data-tel-input
-                      maxlength="14">
+                  <label>
+                    <input placeholder="Телефон" type="tel" name="phone" required data-tel-input maxlength="14">
                   </label>
-
                 </div>
-                <label class="feedback__label">
-                  <textarea class="feedback__question-input" placeholder="Ваш вопрос" name="question"></textarea>
+                <label for="question">
+                  <span class="visually-hidden">
+                    Задайте вопрос
+                  </span>
                 </label>
-                <div class="feedback__button-wrap">
+                <textarea class="feedback__question-input" placeholder="Ваш вопрос" name="question" id="question"></textarea>
+                <div class="feedback__wrapper-button">
                   <button class="feedback__button btn" type="submit">Задать вопрос</button>
-                  <input class="feedback__checkbox visually-hidden" type="checkbox" id="consent" name="consent" checked
-                    required>
-                  <label class="feedback__checkbox-label" for="consent">
+                  <input class="visually-hidden" type="checkbox" id="consent" name="consent" checked required>
+                  <label for="consent">
                     Я согласен на обработку персональных данных
                   </label>
                 </div>
@@ -221,8 +242,10 @@
           <div class="footer-container">
             <div class="footer-social">
               <a class="footer-logo">
-                <img class="header-logo-image" src="img/logo.png" srcset="img/logo@2x.png 2x" width="215" height="55"
-                  alt="Smart Device.">
+                <picture>
+                  <source type="image/webp" srcset="img/logo.webp, img/logo@2x.webp 2x">
+                  <img src="img/logo.png" srcset="img/logo@2x.png 2x" width="215" height="55" alt="Smart Device.">
+                </picture>
               </a>
               <ul class="footer-social__list">
                 <li class="footer-social__item">
@@ -300,33 +323,29 @@
     <div class="modal__wrapper">
       <div class="modal__overlay" data-close-modal></div>
       <div class="modal__content">
-
         <h3 class="modal__title">Закажите звонок</h3>
         <p class="modal__text">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
         <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
-          <label class="modal__label">
-            <input class="modal__input" placeholder="Имя" type="text" name="name" required data-name-input>
+          <label>
+            <input placeholder="Имя" type="text" name="name" required data-name-input>
           </label>
-          <label class="modal__label">
-            <input class="modal__input" placeholder="Телефон" type="tel" name="phone" required data-tel-input
-              maxlength="12">
+          <label>
+            <input placeholder="Телефон" type="tel" name="phone" required data-tel-input maxlength="12">
           </label>
-          <label class="modal__label">
-            <textarea class="modal__input modal__input--question" placeholder="Ваш вопрос" name="question"></textarea>
+          <label for="issue">
+            <span class="visually-hidden">
+              Задайте вопрос
+            </span>
           </label>
-
+          <textarea placeholder="Ваш вопрос" name="issue" id="issue"></textarea>
           <button class="modal__button btn" type="submit">Отправить</button>
-          <input class="modal__checkbox visually-hidden" type="checkbox" id="permission" name="permission" checked
-            required>
-          <label class="modal__checkbox-label" for="permission">
-
-            Я согласен на обработку персональных данных
+          <input class="visually-hidden" type="checkbox" id="permission" name="permission" checked required>
+          <label for="permission">
+            Я согласен на обработку &nbsp;персональных данных
           </label>
-
         </form>
-
         <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-          <svg width="15" height="15">
+          <svg width="20" height="20">
             <use xlink:href="img/sprite_auto.svg#icon-close-white"></use>
           </svg>
         </button>

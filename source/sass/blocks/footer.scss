@@ -8,7 +8,7 @@
   @include vp-1023 {
     min-height: 465px;
     padding-top: 50px;
-    padding-bottom: 65px;
+    padding-bottom: 53px;
   }
 
   @include vp-767 {
@@ -32,6 +32,10 @@
 
   @include vp-1023 {
     flex-direction: column;
+  }
+
+  @include vp-767 {
+    padding-bottom: 35px;
   }
 }
 
@@ -83,6 +87,10 @@
 
 .footer-social__link {
   display: block;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .footer-social__icon {
@@ -92,11 +100,12 @@
 .footer-social__link:hover .footer-social__icon,
 .footer-social__link:focus .footer-social__icon,
 .footer-social__link:focus-visible .footer-social__icon {
-  fill: $color-blue;
+  outline: 1px solid $color-blue;
+  outline-offset: 2px;
 }
 
 .footer-social__link:active .footer-social__icon {
-  outline: 1px solid $color-blue;
+  fill: $color-blue;
 }
 
 .footer-logo {
@@ -217,9 +226,18 @@
     grid-template-columns: 220px;
   }
 
-  //@include vp-767 {
-  //
-  //}
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+
+.footer-nav__first,
+.footer-nav__second {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .footer-nav__link {
@@ -231,11 +249,11 @@
   &:hover,
   &:focus,
   &:focus-visible {
-    color: $color-blue;
+    outline: 1px solid $color-blue;
   }
 
   &:active {
-    outline: 1px solid $color-blue;
+    color: $color-blue;
   }
 }
 
@@ -250,7 +268,10 @@
   }
 
   @include vp-767 {
-    padding: 20px 25px;
+    padding-bottom: 14px;
+    padding-top: 20px;
+    padding-right: 25px;
+    padding-left: 25px;
   }
 }
 
@@ -301,6 +322,10 @@
   margin-bottom: 5px;
   line-height: 25px;
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   @include vp-767 {
     font-size: 14px;
   }
@@ -308,10 +333,10 @@
   &:hover,
   &:focus,
   &:focus-visible {
-    color: $color-blue;
+    outline: 1px solid $color-blue;
   }
 
   &:active {
-    outline: 1px solid $color-blue;
+    color: $color-blue;
   }
 }

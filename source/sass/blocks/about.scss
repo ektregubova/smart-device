@@ -12,15 +12,20 @@
     left: 0;
     width: 150px;
     height: 320px;
-    /* stylelint-disable */
-    background-image: image-set(url("../img/background/text2022.png") 1x,
-                                url("../img/background/text2022@2x.png") 2x);
-    /* stylelint-enable */
+    background-image: image-set(url("../img/background/text2022@2x.webp") 2x,
+                                url("../img/background/text2022.webp") 1x,
+                                url("../img/background/text2022@2x.png") 2x,
+                                url("../img/background/text2022.png") 1x);
   }
 
   @include vp-1023 {
-    padding-bottom: 80px;
-    padding-left: 170px;
+    padding-bottom: 78px;
+    padding-left: 176px;
+
+    &::before {
+      left: -4px;
+      top: 7px;
+    }
   }
 
   @include vp-767 {
@@ -36,6 +41,7 @@
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 36px;
   line-height: 51px;
+  font-weight: 400;
   margin: 0;
   margin-bottom: 12px;
 
@@ -49,8 +55,12 @@
 .about__info {
   margin-bottom: 40px;
 
+  @include vp-1023 {
+    margin-bottom: 0;
+  }
+
   @include vp-767 {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
 }
 
@@ -60,14 +70,14 @@
 
 [data-mobile] {
   @include vp-767 {
-    height: 210px;
+    max-height: 210px;
     overflow: hidden;
   }
 }
 
 [data-mobile].is-open {
   @include vp-767 {
-    height: 378px;
+    max-height: 378px;
   }
 }
 
@@ -75,10 +85,14 @@
   display: block;
 }
 
-.about__text {
+.about__info p {
   margin: 0;
   margin-bottom: 22px;
   line-height: 22px;
+
+  @include vp-1023 {
+    margin-bottom: 20px;
+  }
 
   @include vp-767 {
     font-size: 14px;
@@ -89,7 +103,7 @@
 
 .about__button {
   width: 180px;
-  height: 45px;
+  min-height: 45px;
   border: 1px solid $color-blue;
   border-radius: 3px;
   color: $color-blue;
@@ -100,10 +114,12 @@
   text-transform: uppercase;
   font-size: 14px;
   line-height: 16px;
+  user-select: none;
 
   @include vp-767 {
-    width: 160px;
-    height: 35px;
+    width: 60%;
+    max-width: 160px;
+    min-height: 35px;
     font-size: 14px;
     line-height: 16px;
   }
@@ -111,12 +127,11 @@
   &:hover,
   &:focus,
   &:focus-visible {
-    background-color: $color-blue;
-    color: $color-default-white;
+    border: 1px solid $color-dark-blue;
   }
 
   &:active {
+    color: $color-default-white;
     background-color: $color-dark-blue;
-    border: 1px solid $color-dark-blue;
   }
 }

@@ -1,6 +1,6 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
-import {showItemFooter} from './modules/footer';
+import {showFooterItem} from './modules/footer';
 import {onLinkMove} from './modules/anchor';
 import {showMoreText} from './modules/about';
 import {addListenerOnInput, onClickFocusInput} from './modules/form';
@@ -17,7 +17,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // Modules
   // ---------------------------------
 
-  showItemFooter();
+  showFooterItem();
   onLinkMove();
   showMoreText();
   addListenerOnInput();

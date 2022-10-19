@@ -40,6 +40,7 @@
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 36px;
   line-height: 51px;
+  font-weight: 400;
   color: $color-default-white;
   margin: 0;
   margin-bottom: 53px;
@@ -67,7 +68,7 @@
 .services__link {
   display: block;
   width: 350px;
-  height: 650px;
+  min-height: 650px;
   margin-right: 85px;
   padding-top: 47px;
   padding-left: 40px;
@@ -76,6 +77,9 @@
   line-height: 30px;
   color: $color-default-white;
   position: relative;
+  background-color: rgba($color: $color-blue, $alpha: 0.2);
+  background-repeat: no-repeat;
+  background-size: cover;
 
   &:last-child {
     margin-right: 0;
@@ -84,7 +88,7 @@
 
   @include vp-1023 {
     width: 100%;
-    height: 250px;
+    min-height: 250px;
     margin-right: 0;
     margin-bottom: 30px;
     padding-top: 36px;
@@ -99,80 +103,65 @@
   }
 
   &--production {
-    /* stylelint-disable */
-      background-image: linear-gradient(rgba($color: $color-dark-blue, $alpha: 0.5), rgba($color: $color-dark-blue, $alpha: 0.5)),
-        image-set(url("../img/background/background-services-desktop1.png") 1x,
-                  url("../img/background/background-services-desktop1@2x.png") 2x);
-    /* stylelint-enable */
+    background-image: image-set(url("../img/background/background-services-desktop1.webp") 1x,
+                                url("../img/background/background-services-desktop1@2x.webp") 2x,
+                                url("../img/background/background-services-desktop1.png") 1x,
+                                url("../img/background/background-services-desktop1@2x.png") 2x);
 
     @include vp-1023 {
-      /* stylelint-disable */
-        background-image: linear-gradient(rgba($color: $color-dark-blue, $alpha: 0.5), rgba($color: $color-dark-blue, $alpha: 0.5)),
-          image-set(url("../img/background/background-services-tablet1.png") 1x,
-                  url("../img/background/background-services-tablet1@2x.png") 2x);
-      /* stylelint-enable */
-      background-repeat: no-repeat;
-      background-size: cover;
+      background-image: image-set(url("../img/background/background-services-tablet1.webp") 1x,
+                                  url("../img/background/background-services-tablet1@2x.webp") 2x,
+                                  url("../img/background/background-services-tablet1.png") 1x,
+                                  url("../img/background/background-services-tablet1@2x.png") 2x);
     }
 
     @include vp-767 {
-      /* stylelint-disable */
-        background-image: linear-gradient(rgba($color: $color-dark-blue, $alpha: 0.5), rgba($color: $color-dark-blue, $alpha: 0.5)),
-          image-set(url("../img/background/background-services-mobile1.png") 1x,
-                    url("../img/background/background-services-mobile1@2x.png") 2x);
-      /* stylelint-enable */
+      background-image: image-set(url("../img/background/background-services-mobile1.webp") 1x,
+                                  url("../img/background/background-services-mobile1@2x.webp") 2x,
+                                  url("../img/background/background-services-mobile1.png") 1x,
+                                  url("../img/background/background-services-mobile1@2x.png") 2x);
     }
   }
 
   &--montage {
-    /* stylelint-disable */
-      background-image: linear-gradient(rgba($color: $color-dark-blue, $alpha: 0.5), rgba($color: $color-dark-blue, $alpha: 0.5)),
-        image-set(url("../img/background/background-services-desktop2.png") 1x,
-                  url("../img/background/background-services-desktop2@2x.png") 2x);
-    /* stylelint-enable */
+    background-image: image-set(url("../img/background/background-services-desktop2.webp") 1x,
+                                url("../img/background/background-services-desktop2@2x.webp") 2x,
+                                url("../img/background/background-services-desktop2.png") 1x,
+                                url("../img/background/background-services-desktop2@2x.png") 2x);
 
     @include vp-1023 {
-      /* stylelint-disable */
-        background-image: linear-gradient(rgba($color: $color-dark-blue, $alpha: 0.5), rgba($color: $color-dark-blue, $alpha: 0.5)),
-          image-set(url("../img/background/background-services-tablet2.png") 1x,
-                    url("../img/background/background-services-tablet2@2x.png") 2x);
-      /* stylelint-enable */
-      background-repeat: no-repeat;
-      background-size: cover;
+      background-image: image-set(url("../img/background/background-services-tablet2.webp") 1x,
+                                  url("../img/background/background-services-tablet2@2x.webp") 2x,
+                                  url("../img/background/background-services-tablet2.png") 1x,
+                                  url("../img/background/background-services-tablet2@2x.png") 2x);
     }
 
     @include vp-767 {
-      /* stylelint-disable */
-        background-image: linear-gradient(rgba($color: $color-dark-blue, $alpha: 0.5), rgba($color: $color-dark-blue, $alpha: 0.5)),
-          image-set(url("../img/background/background-services-mobile2.png") 1x,
-                    url("../img/background/background-services-mobile2@2x.png") 2x);
-      /* stylelint-enable */
+      background-image: image-set(url("../img/background/background-services-mobile2.webp") 1x,
+                                  url("../img/background/background-services-mobile2@2x.webp") 2x,
+                                  url("../img/background/background-services-mobile2.png") 1x,
+                                  url("../img/background/background-services-mobile2@2x.png") 2x);
     }
   }
 
   &--accessories {
-    /* stylelint-disable */
-      background-image: linear-gradient(rgba($color: $color-dark-blue, $alpha: 0.5), rgba($color: $color-dark-blue, $alpha: 0.5)),
-        image-set(url("../img/background/background-services-desktop3.png") 1x,
-                  url("../img/background/background-services-desktop3@2x.png") 2x);
-    /* stylelint-enable */
+    background-image: image-set(url("../img/background/background-services-desktop3.webp") 1x,
+                                url("../img/background/background-services-desktop3@2x.webp") 2x,
+                                url("../img/background/background-services-desktop3.png") 1x,
+                                url("../img/background/background-services-desktop3@2x.png") 2x);
 
     @include vp-1023 {
-    /* stylelint-disable */
-      background-image: linear-gradient(rgba($color: $color-dark-blue, $alpha: 0.5), rgba($color: $color-dark-blue, $alpha: 0.5)),
-        image-set(url("../img/background/background-services-tablet3.png") 1x,
-                  url("../img/background/background-services-tablet3@2x.png") 2x);
-      /* stylelint-enable */
-      background-repeat: no-repeat;
-      background-size: cover;
+      background-image: image-set(url("../img/background/background-services-tablet3.webp") 1x,
+                                  url("../img/background/background-services-tablet3@2x.webp") 2x,
+                                  url("../img/background/background-services-tablet3.png") 1x,
+                                  url("../img/background/background-services-tablet3@2x.png") 2x);
     }
 
     @include vp-767 {
-      /* stylelint-disable */
-        background-image: linear-gradient(rgba($color: $color-dark-blue, $alpha: 0.5), rgba($color: $color-dark-blue, $alpha: 0.5)),
-          image-set(url("../img/background/background-services-mobile3.png") 1x,
-                    url("../img/background/background-services-mobile3@2x.png") 2x);
-      /* stylelint-enable */
+      background-image: image-set(url("../img/background/background-services-mobile3.webp") 1x,
+                                  url("../img/background/background-services-mobile3@2x.webp") 2x,
+                                  url("../img/background/background-services-mobile3.png") 1x,
+                                  url("../img/background/background-services-mobile3@2x.png") 2x);
     }
   }
 
@@ -195,14 +184,15 @@
     }
   }
 
+  &:hover,
+  &:focus,
+  &:focus-visible,
   &:active {
     outline: 1px solid $color-blue;
   }
 }
 
-.services__link:hover,
-.services__link:focus,
-.services__link:focus-visible .services__info {
+.services__link:active .services__info {
   color: $color-blue;
 }
 

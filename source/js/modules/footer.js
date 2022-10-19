@@ -6,7 +6,7 @@ footerItem.forEach((item) => {
   item.classList.add('is-close');
 });
 
-function showItemFooter() {
+function showFooterItem() {
   footerItemTitles.forEach((footerItemTitle) => footerItemTitle.addEventListener('click', () => {
     const currentItem = footerItemTitle.closest('[data-item]');
     const isOpened = currentItem.classList.contains('is-open');
@@ -23,5 +23,4 @@ function showItemFooter() {
   }));
 }
 
-export {showItemFooter};
-
+export {showFooterItem};
