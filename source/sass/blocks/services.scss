@@ -21,7 +21,7 @@
   }
 }
 
-.services__title {
+.services h2 {
   display: none;
 
   @include vp-767 {
@@ -36,7 +36,7 @@
   }
 }
 
-.services__text {
+.services p {
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 36px;
   line-height: 51px;

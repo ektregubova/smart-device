@@ -62,7 +62,7 @@
   }
 }
 
-.feedback__title {
+.feedback h2 {
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 36px;
   line-height: 51px;
@@ -84,7 +84,7 @@
   }
 }
 
-.feedback__text {
+.feedback p {
   line-height: 22px;
   color: $color-default-white;
   margin: 0;

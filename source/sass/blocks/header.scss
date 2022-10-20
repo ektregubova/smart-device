@@ -1,4 +1,4 @@
-.header-wrapper {
+.header {
   width: 100%;
   position: fixed;
   z-index: 10;
@@ -7,7 +7,7 @@
   background: linear-gradient(to bottom, rgba($color: $color-dark-blue, $alpha: 1) 84.9%, rgba($color: $color-dark-blue, $alpha: 0) 100%);
 }
 
-.header-container {
+.header__container {
   max-width: 1260px;
   margin: 0 auto;
   min-height: 120px;
@@ -27,7 +27,7 @@
   }
 }
 
-.header-logo {
+.header__logo {
   padding-bottom: 5px;
   padding-left: 20px;
 
@@ -43,7 +43,7 @@
   }
 }
 
-.header-list {
+.header__list {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -63,7 +63,7 @@
   }
 }
 
-.header-link {
+.header__link {
   padding-left: 35px;
   position: relative;
 
@@ -99,13 +99,13 @@
   }
 }
 
-.header-text {
+.header__text {
   @include vp-1023 {
     display: none;
   }
 }
 
-.header-button {
+.header__button {
   border: 1px solid $color-text-light;
   border-radius: 3px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
