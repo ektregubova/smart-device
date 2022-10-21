@@ -1356,7 +1356,7 @@ button,
   background-color: #00b2ff;
 }
 
-.advantages__item:hover .advantages__name {
+.advantages__item:hover h3 {
   color: #f2f5f7;
 }
 
