@@ -5,6 +5,10 @@
   top: 0;
   left: 0;
   background: linear-gradient(to bottom, rgba($color: $color-dark-blue, $alpha: 1) 84.9%, rgba($color: $color-dark-blue, $alpha: 0) 100%);
+
+  @include vp-1023 {
+    position: absolute;
+  }
 }
 
 .header__container {
@@ -18,11 +22,12 @@
   padding-right: 80px;
 
   @include vp-1023 {
-    padding-right: 25px;
+    min-height: 100px;
+    padding-right: 14px;
   }
 
   @include vp-767 {
-    padding-right: 10px;
+    padding-right: 5px;
     min-height: 70px;
   }
 }
@@ -33,7 +38,7 @@
 
   @include vp-1023 {
     padding: 0;
-    margin-bottom: 25px;
+    margin-bottom: 5px;
   }
 
   @include vp-767 {
@@ -48,18 +53,23 @@
   display: flex;
   flex-wrap: wrap;
   min-height: 38px;
-  width: 460px;
+  width: 40%;
+  min-width: 370px;
   justify-content: space-between;
   padding: 0;
   margin: 0;
+  padding-right: 9px;
+  padding-left: 3px;
 
   @include vp-1023 {
+    min-width: 97px;
     width: 97px;
-    margin-bottom: 25px;
+    padding: 0;
+    padding-bottom: 20px;
   }
 
   @include vp-767 {
-    margin: 0;
+    padding: 0;
   }
 }
 
@@ -74,7 +84,7 @@
     width: 20px;
     left: 0;
     top: 0;
-    background: url("../../img/svg/mail.svg") no-repeat center;
+    background: url("../img/svg/mail.svg") no-repeat center;
   }
 
   &--phone::before {
@@ -84,7 +94,7 @@
     width: 20px;
     left: 0;
     top: 0;
-    background: url("../../img/svg/phone.svg") no-repeat center;
+    background: url("../img/svg/phone.svg") no-repeat center;
   }
 
   &:hover,

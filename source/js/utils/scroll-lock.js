@@ -29,6 +29,7 @@ export class ScrollLock {
       });
     }
     document.body.style.top = `-${this._scrollTop}px`;
+    document.body.style.overflow = 'hidden';
     document.body.classList.add(this._lockClass);
   }
 
@@ -37,6 +38,7 @@ export class ScrollLock {
     window.scrollTo(0, +document.body.dataset.scroll);
     document.body.style.paddingRight = null;
     document.body.style.top = null;
+    document.body.style.overflow = null;
     this._fixedBlockElements.forEach((block) => {
       block.style.paddingRight = null;
     });

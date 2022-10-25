@@ -191,12 +191,20 @@
   &:hover,
   &:focus,
   &:focus-visible {
+    outline: 1px solid $color-default-white;
     color: $color-blue;
   }
 
   &:active {
     outline: 1px solid $color-default-white;
   }
+}
+
+.modal__wrapper-button {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  position: relative;
 }
 
 .modal__form input[type="checkbox"] + label {
@@ -222,8 +230,13 @@
   }
 }
 
+.modal__form input[type="checkbox"] {
+  height: 16px;
+  margin-bottom: 0;
+}
+
 .modal__form input[type="checkbox"]:checked + label::before {
-  background-image: url("../../img/svg/arrow-checkbox.svg");
+  background-image: url("../img/svg/arrow-checkbox.svg");
   background-repeat: no-repeat;
   background-position: 1px 3px;
 }
