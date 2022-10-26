@@ -1254,8 +1254,9 @@ button,
   -ms-flex-pack: start;
   justify-content: flex-start;
   gap: 15px;
-  margin-top: 31px;
+  margin-top: 30px;
   padding-left: 10px;
+  width: 160px;
 }
 
 .footer-social__link {
@@ -1542,14 +1543,10 @@ button,
   list-style: none;
   margin: 0;
   padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
   gap: 85px;
 }
 
@@ -1557,9 +1554,6 @@ button,
   display: block;
   min-width: 250px;
   max-width: 350px;
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
   min-height: 650px;
   padding-top: 47px;
   padding-left: 40px;
@@ -2057,10 +2051,8 @@ button,
   }
 
   .services__list {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
     gap: 30px;
   }
 
